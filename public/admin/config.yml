@@ -10,13 +10,14 @@ public_folder: '/' # The src attribute for uploaded media will begin with /
 
 collections:
   - name: "docs" # Used in routes, e.g., /admin/collections/blog
+    identifier_field: name
     label: "Docs" # Used in the UI
     folder: "src/components" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     extension: mdx
     slug: '{{title}}' # Filename template, e.g., title.stories.mdx
     format: yaml-frontmatter
-    frontmatter_delimiter: ['{/*', '*/}']
     fields: # The fields for each document, usually in front matter
-      - { label: 'Title', name: 'title', widget: 'hidden' }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: 'Body', name: 'body', widget: 'markdown', modes: ['raw'] }
