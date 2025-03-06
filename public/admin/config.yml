@@ -1,16 +1,9 @@
-
-local_backend: true # localhost only
-  url: http://localhost:8082/api/v1
-  # when accessing the local site from a host other than 'localhost' or '127.0.0.1'
-  allowed_hosts: ['192.168.0.1']
-
 backend:
-  # name: github
-  name: git-gateway # localhost only
+  name: github
   repo: lynly/design-system-sb-decap
   branch: main # Branch to update (optional; defaults to master)
 
-# publish_mode: editorial_workflow
+publish_mode: editorial_workflow
 
 media_folder: 'public' # Media files will be stored in the repo under public/
 public_folder: '/' # The src attribute for uploaded media will begin with /
