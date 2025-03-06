@@ -14,10 +14,9 @@ collections:
     folder: "src/components" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     extension: mdx
-    slug: '{{title}}.stories' # Filename template, e.g., title.stories.mdx
+    slug: '{{title}}' # Filename template, e.g., title.stories.mdx
     format: yaml-frontmatter
     frontmatter_delimiter: ['<!--', '-->']
     fields: # The fields for each document, usually in front matter
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: 'Title', name: 'title', widget: 'hidden' }
+      - { label: 'Body', name: 'body', widget: 'markdown', modes: ['raw'] }
