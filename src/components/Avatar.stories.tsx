@@ -30,6 +30,8 @@ export const Small = () => <Base size="small" />;
 
 export const Tiny = () => <Base size="tiny" />;
 
+export const Properties = (args) => <Base {...args} />;
+
 export const Organization = () => (
   <Base type={AvatarType.ORGANIZATION} username="Chromatic" src="/chromatic-logo-square.png" />
 );
