@@ -1,0 +1,49 @@
+/*
+title: Avatar
+date: 17 March 2025
+mdx-imports: |-
+  import { Meta, Canvas, Subtitle, Controls } from '@storybook/blocks'
+  import * as stories from './Avatar.stories'
+
+  <Meta title="Avatar" />
+sub-title: <Subtitle>The `Avatar` component is where all your avatars come to
+  play.</Subtitle>
+about-section:
+  about-content: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+    est laborum.
+  about-heading: About this component
+  about-meta-component: >-
+    <Source
+            language='js'
+            code={\`
+        async getSuggestions (searchValue: string, abortSignal: AbortSignal): Promise<Arrray<{ id: string; address: string }>> {
+            const response = await fetch(suggestionsApi, {
+                signal: abortSignal,
+            })
+            const data = await response.json()
+            return data
+        }
+        \`}
+    />
+example-section:
+  example-story: <Canvas of={stories.Large} />
+  example-heading: Large avatar
+  example-content: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+    do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+    ea commodo consequat.
+example-section-2:
+  example-content: Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  example-story: <Canvas of={stories.Medium} />
+  example-heading: Medium avatar
+properties-section:
+  properties-table: <Controls of={stories.Properties} />
+  properties: Properties
+*/
