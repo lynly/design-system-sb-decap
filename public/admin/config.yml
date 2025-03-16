@@ -19,15 +19,15 @@ collections:
     format: yaml-frontmatter
     frontmatter_delimiter: ['/*', '*/']
     fields: # The fields for each document, usually in front matter
-      - { label: 'Mdx imports', name: 'mdx-imports', widget: 'markdown', pattern: ['{/* title: {{title}} */}'], hint: 'imports, <Meta/>' } # TODO test custom
-      - { label: "Title", name: "title", widget: "string", tagname: 'h1', pattern: ['{{title}}'] }
+      - { label: 'Mdx imports', name: 'mdx-imports', widget: 'markdown', hint: 'imports, <Meta/>' } # TODO test custom
+      - { label: "Title", name: "title", widget: "string", tagname: 'h1' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime', format: 'DD MMMM YYYY', default: '{{now}}' }
       - { label: "Subtitle", name: "sub-title", widget: "markdown",  hint: '<Subtitle/>' } # TODO test custom
       - label: 'About Section'
         name: 'about-section'
         widget: 'object'
         fields:
-              - { label: 'About heading', name: 'about-heading', widget: 'string', tagname: 'h2', pattern: ['About this component'] }
+              - { label: 'About heading', name: 'about-heading', widget: 'string', tagname: 'h2'}
               - { label: 'About content', name: 'about-content', widget: 'text' }
               - { label: 'About MetaComponent', name: 'about-meta-component', widget: 'markdown',  hint: '<MetaComponent/>' } # TODO test custom
       - label: 'Example Section'
@@ -49,5 +49,5 @@ collections:
         name: 'properties-section'
         widget: 'object'
         fields:
-              - { label: 'Properties', name: 'properties', widget: 'text', tagname: 'h2', pattern: ['Properties'] }
+              - { label: 'Properties', name: 'properties', widget: 'text', tagname: 'h2' }
               - { label: 'Properties table', name: 'properties-table', widget: 'markdown',  hint: '<Controls/>' } # TODO test custom
