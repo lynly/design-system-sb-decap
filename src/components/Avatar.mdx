@@ -1,22 +1,21 @@
-{/* title: avatar */}
-
+{/*
+title: Checkbox
+*/}
 import { Meta, Canvas, Subtitle, Controls } from '@storybook/blocks'
-import * as stories from './Avatar.stories'
+import * as stories from './Checkbox.stories'
 
 <Meta of={stories} />
 
-# Avatar
+# Checkbox
 
-<Subtitle>The `Avatar` component is where all your avatars come to play.</Subtitle>
-
+<Subtitle>The `Checkbox` component.</Subtitle>
 
 ## Examples
+<Canvas of={stories.All} />
 
-<Canvas of={stories.Large} />
+<Canvas of={stories.Unchecked} />
 
-<Canvas of={stories.Medium} />
-
+<Canvas of={stories.Checked} />
 
 ## Properties
-
-<Controls of={stories.Properties} />
+<Controls of={stories.Template} />
