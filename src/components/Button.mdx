@@ -1,0 +1,21 @@
+import { Meta, Canvas, Subtitle, Controls } from '@storybook/blocks'
+import * as stories from './Avatar.stories'
+
+<Meta of={stories} />
+
+# Avatar
+
+<Subtitle>The `Avatar` component is where all your avatars come to play.</Subtitle>
+
+
+## Examples
+
+<Canvas of={stories.All} />
+
+<Canvas of={stories.Sizes} />
+
+<Canvas of={stories.ContainsSVG} />
+
+## Properties
+
+<Controls of={stories.Basic} />
